@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>React Basics</title>
+</head>
+
+<body>
+    <div class="js-container"></div>
+
+    <script>
+        let productCost = 10 + (2 * 8);
+        let shippingCost = 5;
+        let totalCost = productCost + shippingCost
+        console.log(productCost)
+    </script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+        const result = <p>productCost: {productCost}</p>
+
+        const div = <div>
+
+            <p>Product Cost: {productCost}</p>
+            <p>Shipping Cost: {shippingCost}</p>
+            <p>Total Cost: {productCost + shippingCost}</p>
+
+        </div>
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(div);
+    </script>
+</body>
+
+</html>
